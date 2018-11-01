@@ -41,7 +41,7 @@
          * This lets our recursion know when to stop.
          */
 
-        //TODO
+        
 
         /*
          * Here is the recursive statement. The function calls itself when the base case is not met.
@@ -51,7 +51,7 @@
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
 
-        //TODO
+        
 
     }
 
@@ -87,7 +87,7 @@
         }
     }
 
-    //TODO
+    
 
     /**
      * Class that represents a tree. This is a data structure comprised of several nodes. Each node may
@@ -178,7 +178,12 @@
      */
     public int treeSum(Tree tree)
     {
-        return 0;//TODO
+        int sum = 0;
+        for (Tree child : tree.getChildren())
+        {
+            sum += treeSum(tree);
+        }
+        return sum;
     }
 
     /**
