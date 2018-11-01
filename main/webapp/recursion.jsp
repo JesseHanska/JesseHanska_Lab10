@@ -29,13 +29,13 @@
     public int factorial(int value)
     {
         int factNum = 0;
-        
-        if(factNum ==1)
+
+        if (factNum == 1)
         {
             return 1;
         }
-        
-        return value * factorial(value-1);
+
+        return value * factorial(value - 1);
         /*
          * Here is the base case (ending condition): value == 1.
          * This lets our recursion know when to stop.
@@ -73,7 +73,18 @@
      */
     public int fibonacci(int n)
     {
-    	return 0;
+        if (n == 0)
+        {
+            return 0;
+        }
+        else if (n == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
     }
 
     //TODO
@@ -107,26 +118,30 @@
 
         public Tree(int value)
         {
-            //TODO
+            //Tree root = new Tree(5);
+            
+            //Tree child1 = new Tree(7);
+            //Tree child2 = new Tree(8);
+            
+            //root.add(child1);
+            //root.add(child2);
         }
 
         public int getValue()
         {
-            return 0;
+            //return value;
         }
 
         public ArrayList<Tree> getChildren()
         {
-            return null;
+            //return children;
         }
 
         public void add(Tree child)
         {
-            //TODO
+            //children.add(child);
         }
     }
-
-    
 
     /**
      * In a binary tree, each node has two children. In a ternary tree, each node has 3 children.
