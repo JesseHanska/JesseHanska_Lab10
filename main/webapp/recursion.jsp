@@ -118,28 +118,23 @@
 
         public Tree(int value)
         {
-            //Tree root = new Tree(5);
-            
-            //Tree child1 = new Tree(7);
-            //Tree child2 = new Tree(8);
-            
-            //root.add(child1);
-            //root.add(child2);
+            this.value = value;
+            children = new ArrayList<Tree>();
         }
 
         public int getValue()
         {
-            //return value;
+            return value;
         }
 
         public ArrayList<Tree> getChildren()
         {
-            //return children;
+            return children;
         }
 
         public void add(Tree child)
         {
-            //children.add(child);
+            children.add(child);
         }
     }
 
@@ -168,12 +163,9 @@
     {
         if (height == 1)
         {
-            return 1;//TODO 
+            return 1;
         }
-        else
-        {
-            return 0;//TODO
-        }
+        return 1 + branchingFactor * nnaryTreeSize(branchingFactor, height - 1);
     }
 
     /**
