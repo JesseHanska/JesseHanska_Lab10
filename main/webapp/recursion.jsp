@@ -28,18 +28,18 @@
        */
     public int factorial(int value)
     {
-        int factNum = 0;
 
-        if (factNum == 1)
-        {
-            return 1;
-        }
+        
 
-        return value * factorial(value - 1);
+        
         /*
          * Here is the base case (ending condition): value == 1.
          * This lets our recursion know when to stop.
          */
+         if (value == 1)
+         {
+             return 1;
+         }
 
         
 
@@ -50,6 +50,7 @@
          * 
          * By doing this, we break up the equation n! into n! = n * (n-1)!.
          */
+         return value * factorial(value - 1);
 
         
 
@@ -178,10 +179,10 @@
      */
     public int treeSum(Tree tree)
     {
-        int sum = 0;
+        int sum = tree.getValue();
         for (Tree child : tree.getChildren())
         {
-            sum += treeSum(tree);
+            sum += treeSum(child);
         }
         return sum;
     }
